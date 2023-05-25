@@ -1,0 +1,44 @@
+body{
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    display: grid;
+    place-content: center;
+}
+.main{
+    background-color: hsl(216, 50%, 16%);
+    color: hsl(0, 0%, 100%);
+    max-width: 18rem;
+    padding: 2rem;
+}
+.cardimg{
+    width: 100%;
+}
+.title{
+    text-align: center;
+}
+.wraper{
+    display: grid;
+}
+.eth{
+    grid-column-start: 1;
+}
+.countdown{
+    grid-column-start: 2;
+    text-align: right;
+}
+hr{
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.avatarimg{
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 50%;
+    max-width: 2rem;
+    grid-column-start: 1;
+    place-content: center;
+}
+.author{
+    grid-column-start: 2;
+}
