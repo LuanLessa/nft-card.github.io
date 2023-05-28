@@ -1,4 +1,12 @@
+html{
+    font-size: 62.5%;
+    min-width: 375px;
+}
 body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
     background-color: hsl(217, 54%, 11%);
     font-family: 'Outfit', sans-serif;
     display: grid;
@@ -6,39 +14,137 @@ body{
 }
 .main{
     background-color: hsl(216, 50%, 16%);
-    color: hsl(0, 0%, 100%);
-    max-width: 18rem;
+    max-width: 30rem;
     padding: 2rem;
+    border-radius: 1em;
 }
 .cardimg{
     width: 100%;
+    border-radius: 0.5em;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.imgwraper{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.imgwraper i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+.imgwraper:hover i{
+    opacity: 1;
+    visibility: visible;
+}
+.imgwraper::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 0.5em
+}
+.imgwraper:hover::before{
+    opacity: 1;
+    border-radius: 0.5em
 }
 .title{
-    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    padding-top: 1rem;
+}
+.title:hover{
+    color: hsl(178, 100%, 50%);
+}
+.text{
+    font-weight: 400;
+    font-style: bold;
+    color: hsl(215, 32%, 27%);
+    font-size: 18px;
 }
 .wraper{
     display: grid;
+    place-items: center;
+    justify-content: start;
+    padding-bottom: 1rem;
+}
+.ethicon{
+    grid-column-start: 1;
 }
 .eth{
-    grid-column-start: 1;
+    font-weight: 600;
+    font-size: 1.6rem;
+    grid-column-start: 2;
+    color: hsl(178, 100%, 50%);
+    margin: 0.7rem;
+}
+.clockicon{
+    grid-column-start: 3;
+    margin-left: 9.5rem;
 }
 .countdown{
-    grid-column-start: 2;
-    text-align: right;
+    font-weight: 600;
+    font-size: 1.6rem;
+    grid-column-start: 4;
+    color: hsl(215, 32%, 27%);
+    margin: 0.7rem;
 }
 hr{
-    width: 100%;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    border: 1px solid hsl(215, 32%, 27%);
+}
+.authorwraper{
+    font-size: 1.6rem;
+    display: grid;
+    justify-content: start;
+    place-items: center start;
 }
 .avatarimg{
     border-style: solid;
     border-width: 0.1rem;
     border-radius: 50%;
-    max-width: 2rem;
+    border-color: hsl(0, 0%, 100%);
+    max-width: 2em;
     grid-column-start: 1;
-    place-content: center;
 }
 .author{
+    font-weight: 600;
+    font-size: 1.6rem;
     grid-column-start: 2;
+    margin: 1.5rem;
+    color: hsl(215, 32%, 27%);;
+}
+a:link{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.4rem;
+}
+a:visited{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.4rem;
+}
+a:hover{
+    color: hsl(178, 100%, 50%);
+}
+.attribution{
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
 }
